@@ -1,0 +1,112 @@
+{
+	"info": {
+		"_postman_id": "ab419c95-6945-4a10-8a4a-632ebd02cedd",
+		"name": "Photos",
+		"schema": "https://schema.getpostman.com/json/collection/v2.1.0/collection.json",
+		"_exporter_id": "19411276"
+	},
+	"item": [
+		{
+			"name": "Get All Photos",
+			"protocolProfileBehavior": {
+				"disableBodyPruning": true
+			},
+			"request": {
+				"method": "GET",
+				"header": [
+					{
+						"key": "auth-token",
+						"value": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJuYW1lIjoianVhbnNlMDM2IiwiaWQiOiIkMmIkMTAkSXNuT3RpeENWZHlWQk1LSUlaeUkvTzNReDJhcVdObHc2STBuaXhUWmlrLktGOG9sNkh0Q3UiLCJpYXQiOjE2NjQyMTE4MzN9.lkk-eXz82HrjsK3iMGTFXZ8U38H2BA3knH82xo8DLnk",
+						"type": "text"
+					}
+				],
+				"body": {
+					"mode": "raw",
+					"raw": ""
+				},
+				"url": {
+					"raw": "http://localhost:5000/photo",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "5000",
+					"path": [
+						"photo"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "Upload Photos",
+			"request": {
+				"method": "POST",
+				"header": [
+					{
+						"key": "auth-token",
+						"value": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJuYW1lIjoianVhbnNlMDM2IiwiaWQiOiIkMmIkMTAkSXNuT3RpeENWZHlWQk1LSUlaeUkvTzNReDJhcVdObHc2STBuaXhUWmlrLktGOG9sNkh0Q3UiLCJpYXQiOjE2NjM5NjQ4NDZ9.YRIWoLDi-Y5Szv3-Ky_SVjJmw1MLuaLBZl1NJUV2GMc",
+						"type": "text"
+					}
+				],
+				"body": {
+					"mode": "raw",
+					"raw": "{\r\n    \"label\": \"arbol\",\r\n    \"ImgUrl\": \"https://cdn.pixabay.com/photo/2015/04/23/22/00/tree-736885__480.jpg\"\r\n}",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "http://localhost:5000/photo/upload",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "5000",
+					"path": [
+						"photo",
+						"upload"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "Delete Photos",
+			"request": {
+				"method": "POST",
+				"header": [
+					{
+						"key": "auth-token",
+						"value": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJuYW1lIjoibWlkdWRldiIsImlkIjoiJDJiJDEwJFpTZ213Y21yeW5XcWk0VC5DMVFHVi5kMjAwWU91NXJveVg3b0FxanFtYTlaaXF0WFRvUzg2IiwiaWF0IjoxNjY0Mzk4ODE4fQ.1aTqcuxFBhn6ZnbnaCaVI3ow7U4V4KqvGanlJ5yMMXM",
+						"type": "text"
+					}
+				],
+				"body": {
+					"mode": "raw",
+					"raw": "{\r\n    \"id\": \"f7292e77-5003-42ca-bc39-8fa1ca6e02be\",\r\n    \"entrypassword\": \"123456\"\r\n}",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "http://localhost:5000/photo/delete",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "5000",
+					"path": [
+						"photo",
+						"delete"
+					]
+				}
+			},
+			"response": []
+		}
+	]
+}
